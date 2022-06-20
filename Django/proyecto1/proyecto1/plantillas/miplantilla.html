@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p>Hola!!</p>
+    <p>El nombre es: {{nombre}} {{apellido}}</p>
+    <p>Los temas son: </p>
+    <p>
+        { % if temas % }
+            <ul>
+                {% for tema in temas %}
+                <li>
+                    <p>{{tema}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </p>
+</body>
+</html>
