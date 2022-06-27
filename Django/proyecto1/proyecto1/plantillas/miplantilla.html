@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <body>
+    {% include "barra.html" %}
     <p>Hola!!</p>
     <p>El nombre es: {{nombre}} {{apellido}}</p>
+    {% if nombre == 'David' %}
+    <p>El curso lo imparte el profesors</p>
+    {% else %}
+    <p>El curso lo imparte el profesor suplente</p>
+    {% endif %}
+
     <p>Los temas son: </p>
-    <p>
-        { % if temas % }
+    {% if temas %}
+        {% for tema in temas %}
             <ul>
-                {% for tema in temas %}
                 <li>
-                    <p>{{tema}}</p>
+                    <p>{{tema|first|lower}}</p>{#son filtros#}
                 </li>
-                {% endfor %}
             </ul>
-        {% endif %}
-    </p>
+        {% endfor %}
+    {% endif %}
 </body>
+
 </html>

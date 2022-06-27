@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>{% block title %} {% endblock %}</title>
+    </head>
+    <body>
+
+        {% include "barra.html" %}
+        
+        <h1>Probando django</h1>
+
+        <h3>Cursos de programacion de django y python</h3>
+
+        {% block content %} 
+        
+        
+        
+        {% endblock %}
+
+        <footer>
+            <p>Cursos gratuitos. Gracias por su visita</p>
+        </footer>
+
+    </body>
+</html>

@@ -1,4 +1,4 @@
-"""proyecto1 URL Configuration
+"""TiendaOnline URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -15,12 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from proyecto1.views import cursoC, saludo, dameFecha, calcularEdad
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('saludo/', saludo),
-    path('fecha/', dameFecha),
-    path('cursoc/', cursoC),
-    path('edades/<int:edad>/<int:agno>', calcularEdad)
-] 
+]
